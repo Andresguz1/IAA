@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     {
         correr = true;
         velocidadMov = velocidadCorrer;
-        antorcha.spotAngle -= 0.08f;
+        antorcha.spotAngle -= 0.01f;
     }
     void Caminar()
     {
