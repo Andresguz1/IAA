@@ -11,20 +11,20 @@ public class gameOver : MonoBehaviour
     public bool ResetBase=false;   
     void Start()
     {
-        bases = GameObject.Find("Base").GetComponent<VidaBases>();
-        base1 = GameObject.Find("Base2").GetComponent<VidaBase2>();
-        castillo = GameObject.Find("BasePrincipal").GetComponent<VidaBasePrincipal>();
+      //  bases = GameObject.Find("Base").GetComponent<VidaBases>();
+      //  base1 = GameObject.Find("Base2").GetComponent<VidaBase2>();
+     //   castillo = GameObject.Find("BasePrincipal").GetComponent<VidaBasePrincipal>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(bases.vidas==0 && base1.vida==0 && castillo.vida == 0)
-        {
-            SoundSystem.instance.PlayGameOver();
-            textGameOver.SetActive(true);
-            Destroy(gameObject);
-            ResetBase = true;
-        }
+       //if(bases.vidas==0 && base1.vida==0 && castillo.vida == 0)
+       // {
+       //     SoundSystem.instance.PlayGameOver();
+       //     textGameOver.SetActive(true);
+       //     Destroy(gameObject);
+       //     ResetBase = true;
+       // }
     }
 }

@@ -52,9 +52,9 @@ public class e1 : MonoBehaviour
         tower2 = GameObject.FindGameObjectWithTag("Castle");
         initialposition = transform.position;
 
-        bases = GameObject.Find("Base").GetComponent<VidaBases>();
-        base1 = GameObject.Find("Base2").GetComponent<VidaBase2>();
-        castillo = GameObject.Find("BasePrincipal").GetComponent<VidaBasePrincipal>();
+       // bases = GameObject.Find("Base").GetComponent<VidaBases>();
+       // base1 = GameObject.Find("Base2").GetComponent<VidaBase2>();
+       // castillo = GameObject.Find("BasePrincipal").GetComponent<VidaBasePrincipal>();
         vida = GameObject.Find("Jugador").GetComponent<VidaPlayer>();
         if (vida.vida == 0)
         {
