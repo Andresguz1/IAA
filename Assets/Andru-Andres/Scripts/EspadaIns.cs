@@ -8,7 +8,7 @@ public class EspadaIns : MonoBehaviour
     
     public Transform posicion;
     public GameObject espada;
-    public EspadaRotacion esp;
+  //  public EspadaRotacion esp;
     
     public float tiempoRot;
     public float velociadRotacion;

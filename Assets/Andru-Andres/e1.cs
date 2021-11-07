@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class e1 : MonoBehaviour
 {
     //variable para la vision velocidad
     public float speed;
     public float vidionRadio;
     GameObject player; //para guardar jugador
+    public Transform p;
     Vector3 initialposition;//posicion inicial
 
     public float PowerUp;
@@ -36,19 +37,14 @@ public class e1 : MonoBehaviour
 
     void Start()
     {
-       // variacionAtaque = Random.Range(0, 2);
-        torresAleatoria = Random.Range(0, 3);
-        asignacionEnemigo = Random.Range(0, 3);
-        base2rando = Random.Range(0, 3);
-        castilloRandom = Random.Range(0, 3);
-        DosBases = Random.Range(0, 2);
+        // variacionAtaque = Random.Range(0, 2);
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        NavMeshAgent agente = GetComponent<NavMeshAgent>();
+
+       // player = GameObject.FindGameObjectWithTag("Player");
         initialposition = transform.position;
-
-       // bases = GameObject.Find("Base").GetComponent<VidaBases>();
-       // base1 = GameObject.Find("Base2").GetComponent<VidaBase2>();
-       // castillo = GameObject.Find("BasePrincipal").GetComponent<VidaBasePrincipal>();
+        agente.destination = p.position;
+ 
         vida = GameObject.Find("Jugador").GetComponent<VidaPlayer>();
         if (vida.vida == 0)
         {
@@ -60,20 +56,21 @@ public class e1 : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (gameActivo == true)
-        {
-            Vector3 target = initialposition;
+
+        //if (gameActivo == true)
+        //{
+        //    Vector3 target = initialposition;
 
 
            
-                float dist = Vector3.Distance(player.transform.position, transform.position);
-                if (dist < vidionRadio) target = player.transform.position;
+        //        float dist = Vector3.Distance(player.transform.position, transform.position);
+        //        if (dist < vidionRadio) target = player.transform.position;
 
-                float fixedSpeed = speed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
-                Debug.DrawLine(transform.position, target, Color.green);
+        //        float fixedSpeed = speed * Time.deltaTime;
+        //        transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+        //        Debug.DrawLine(transform.position, target, Color.green);
 
-        }
+        //}
     }
 
     void OnDrawGizmos()

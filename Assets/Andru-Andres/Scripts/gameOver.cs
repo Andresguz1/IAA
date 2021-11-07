@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class gameOver : MonoBehaviour
 {
-    private VidaBases bases;
-    private VidaBase2 base1;
-    private VidaBasePrincipal castillo;
+    //private VidaBases bases;
+    //private VidaBase2 base1;
+    //private VidaBasePrincipal castillo;
     public GameObject textGameOver;
+    public VidaPlayer vidaJ;
     public bool ResetBase=false;   
     void Start()
     {
@@ -19,12 +20,20 @@ public class gameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //if(bases.vidas==0 && base1.vida==0 && castillo.vida == 0)
-       // {
-       //     SoundSystem.instance.PlayGameOver();
-       //     textGameOver.SetActive(true);
-       //     Destroy(gameObject);
-       //     ResetBase = true;
-       // }
+        if (vidaJ.vida == 0)
+        {
+            SoundSystem.instance.PlayGameOver();
+            textGameOver.SetActive(true);
+            Destroy(gameObject);
+            ResetBase = true;
+        }
+
+        //if(bases.vidas==0 && base1.vida==0 && castillo.vida == 0)
+        // {
+        //     SoundSystem.instance.PlayGameOver();
+        //     textGameOver.SetActive(true);
+        //     Destroy(gameObject);
+        //     ResetBase = true;
+        // }
     }
 }
