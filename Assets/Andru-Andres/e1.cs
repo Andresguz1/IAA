@@ -8,9 +8,6 @@ public class e1 : MonoBehaviour
     public float speed;
     public float vidionRadio;
     GameObject player; //para guardar jugador
-    GameObject tower;
-    GameObject tower1;
-    GameObject tower2;
     Vector3 initialposition;//posicion inicial
 
     public float PowerUp;
@@ -47,9 +44,6 @@ public class e1 : MonoBehaviour
         DosBases = Random.Range(0, 2);
 
         player = GameObject.FindGameObjectWithTag("Player");
-        tower = GameObject.FindGameObjectWithTag("Towers");
-        tower1 = GameObject.FindGameObjectWithTag("Towers1");
-        tower2 = GameObject.FindGameObjectWithTag("Castle");
         initialposition = transform.position;
 
         bases = GameObject.Find("Base").GetComponent<VidaBases>();
