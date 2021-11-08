@@ -31,7 +31,7 @@ public class VidaPlayer : MonoBehaviour
             
         }
 
-
+     
 
 
         if (corazones == 0)

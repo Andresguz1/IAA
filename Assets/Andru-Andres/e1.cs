@@ -8,7 +8,7 @@ public class e1 : MonoBehaviour
     public float speed;
     public float vidionRadio;
     GameObject player; //para guardar jugador
-    public Transform p;
+    //public Transform p;
     Vector3 initialposition;//posicion inicial
 
     public float PowerUp;
@@ -34,6 +34,7 @@ public class e1 : MonoBehaviour
     public bool gameActivo = true;
 
     private VidaPlayer vida;
+    public NavMeshAgent agente;
 
     void Start()
     {
@@ -41,10 +42,10 @@ public class e1 : MonoBehaviour
 
         NavMeshAgent agente = GetComponent<NavMeshAgent>();
 
-       // player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         initialposition = transform.position;
-        agente.destination = p.position;
- 
+
+        agente.destination = player.transform.position;
         vida = GameObject.Find("Jugador").GetComponent<VidaPlayer>();
         if (vida.vida == 0)
         {
@@ -56,13 +57,14 @@ public class e1 : MonoBehaviour
     void FixedUpdate()
     {
 
+        agente.destination = player.transform.position;
 
         //if (gameActivo == true)
         //{
         //    Vector3 target = initialposition;
 
 
-           
+
         //        float dist = Vector3.Distance(player.transform.position, transform.position);
         //        if (dist < vidionRadio) target = player.transform.position;
 

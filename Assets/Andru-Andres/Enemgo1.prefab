@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7945013673489184994}
   - component: {fileID: 7945013673489184995}
   - component: {fileID: 1524558840079926219}
+  - component: {fileID: 1330525496535778381}
   m_Layer: 0
   m_Name: Enemgo1
   m_TagString: enemigo
@@ -110,7 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   vidionRadio: 25
-  p: {fileID: 0}
   PowerUp: 0
   prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
     type: 3}
@@ -127,6 +127,7 @@ MonoBehaviour:
   DosBases: 0
   damageTime: 0
   gameActivo: 1
+  agente: {fileID: 1524558840079926219}
 --- !u!54 &7945013673489184995
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,3 +166,16 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1330525496535778381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945013673489184997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16258757b2e80d042b7e37e2df0d0d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantidad: 20
