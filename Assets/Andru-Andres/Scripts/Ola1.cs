@@ -16,21 +16,21 @@ public class Ola1 : MonoBehaviour
     public int numEnemigos;
     private float cont;
 
-    
+    public int numEnemy=10;
     public Text pts;
     void Start()
     {
        
 
         SoundSystem.instance.PlayOla();
-        GeneradorEnemigos(10); 
+        GeneradorEnemigos(numEnemy); 
     }
 
 
     void Update()
     {
         numEnemigos = FindObjectsOfType<Enemigo_Dongnus>().Length;
-       
+        
     }
     void GeneradorEnemigos(int numEnemigosAGenerar)
     {
@@ -41,6 +41,7 @@ public class Ola1 : MonoBehaviour
        
             cont++;
             pts.text = cont.ToString();
+       
         }
     }
  

@@ -74,7 +74,10 @@ public class e1 : MonoBehaviour
 
         //}
     }
-
+    private void Update()
+    {
+        PowerUp = Random.Range(0, 3);
+    }
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
@@ -94,11 +97,13 @@ public class e1 : MonoBehaviour
 
         if (other.gameObject.CompareTag("flecha") || other.gameObject.CompareTag("SuperFlecha"))
         {
+            Destroy(gameObject);
             generaPowerUp();
 
         }
         if (other.gameObject.CompareTag("Espada"))
         {
+            Destroy(gameObject);
             generaPowerUp();
 
         }
@@ -120,7 +125,7 @@ public class e1 : MonoBehaviour
         if (PowerUp == 0 || PowerUp == 1)
         {
             Instantiate(prefabLuz, gameObject.transform.position, prefabLuz.transform.rotation);
-            Destroy(prefabLuz, 6f);
+           // Destroy(prefabLuz, 6f);
 
 
         }
@@ -129,14 +134,14 @@ public class e1 : MonoBehaviour
         {
 
             Instantiate(prefabRafaga, gameObject.transform.position, prefabRafaga.transform.rotation);
-            Destroy(prefabRafaga, 6f);
+            //Destroy(prefabRafaga, 6f);
 
         }
 
         if (PowerUp == 3)
         {
             Instantiate(prefabPowerShoot, gameObject.transform.position, prefabPowerShoot.transform.rotation);
-            Destroy(prefabPowerShoot, 6f);
+           // Destroy(prefabPowerShoot, 6f);
 
         }
 
