@@ -16,25 +16,25 @@ public class e1 : MonoBehaviour
     public GameObject prefabRafaga;
     public GameObject prefabPowerShoot;
 
-    public int variacionAtaque;
-    public int torresAleatoria;
-    public int asignacionEnemigo;
-    public int base2rando;
-    public int castilloRandom;
-    public int cantidad;
-    public int DosBases;
+   
+   
+
+
 
     public float damageTime;
     float currentDamageTime;
 
-    private VidaBases bases;
-    private VidaBase2 base1;
-    private VidaBasePrincipal castillo;
+
 
     public bool gameActivo = true;
 
     private VidaPlayer vida;
     public NavMeshAgent agente;
+
+    private VidaPlayer jugador;
+    [SerializeField]
+    public int cantidad = 20;
+
 
     void Start()
     {
@@ -88,10 +88,12 @@ public class e1 : MonoBehaviour
     {
         if (other.tag == "PLayer")
         {
+            jugador.vida -= cantidad;
             currentDamageTime += Time.deltaTime;
             if (currentDamageTime > damageTime)
             {
                 currentDamageTime = 0.0f;
+                Debug.Log("f");
             }
         }
 

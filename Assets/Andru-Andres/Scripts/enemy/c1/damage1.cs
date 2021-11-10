@@ -20,26 +20,16 @@ public class damage1 : MonoBehaviour
     void Update()
     {
     }
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-           
-    //            jugador.vida -= cantidad;
-
-    //        Debug.Log("vida");
-    //        Debug.Log(jugador.vida);
-
-
-
-    //    }
-    //}
-    private void OnCollisionEnter(Collision collision)
+   
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.tag =="Player")
         {
             jugador.vida -= cantidad;
-           
+
+            Debug.Log("dada");
+            Debug.Log(jugador.vida);
+
         }
     }
 
