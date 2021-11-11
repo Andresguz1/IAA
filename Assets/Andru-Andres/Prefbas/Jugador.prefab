@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2285635062376226210}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.1, z: 0}
+  m_LocalPosition: {x: 0, y: 4.1, z: 0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2492253276909594781}
@@ -198,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6f039aab86a0e10439d22edd9fe3cba8, type: 2}
+  - {fileID: 2100000, guid: 3f6fdc399e04bbb4d9ebd57f69b017f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -331,7 +331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posicion: {fileID: 2492253276909594781}
   espada: {fileID: 6581074858135991049}
-  esp: {fileID: 0}
   tiempoRot: 0
   velociadRotacion: 4
 --- !u!114 &4987118841312801397
@@ -368,7 +367,7 @@ MonoBehaviour:
   corazon2: {fileID: 0}
   corazon3: {fileID: 0}
   textGameOver: {fileID: 0}
-  gameOverUno: {fileID: 0}
+  gameOverUno: {fileID: 2492253277353717731}
   vivo: 1
 --- !u!114 &2492253277353717731
 MonoBehaviour:
@@ -383,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textGameOver: {fileID: 0}
+  vidaJ: {fileID: 2492253277353717728}
   ResetBase: 0
 --- !u!114 &527235920
 MonoBehaviour:

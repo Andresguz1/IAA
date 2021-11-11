@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Andru-Andres/Scenes/Aa.unity
     guid: e67e9043be9698c409fae3bc93490c4f
+  - enabled: 1
+    path: Assets/Andru-Andres/Scenes/2.unity
+    guid: c916462e9876b994aacf2833205ea07c
+  - enabled: 1
+    path: Assets/Andru-Andres/Scenes/SampleScene.unity
+    guid: ca5fa3589a890c64fb4ec571c6985f02
   m_configObjects: {}

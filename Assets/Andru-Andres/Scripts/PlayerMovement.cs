@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        antorcha.spotAngle -= 0.005f;
+        antorcha.spotAngle -= 0.009f;
 
 
         var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);

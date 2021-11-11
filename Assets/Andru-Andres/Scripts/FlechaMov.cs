@@ -34,7 +34,7 @@ public class FlechaMov : MonoBehaviour
 
             Destroy(other.gameObject);
             Destroy(this.gameObject);
-            contadorEnemigos.contadorD -= 1;
+          
             contadorEnemigos.contadorDonEliminados += 1;
            
         }
@@ -45,7 +45,7 @@ public class FlechaMov : MonoBehaviour
 
             Destroy(other.gameObject);
             Destroy(this.gameObject);
-            contadorEnemigos.contadorC -= 1;
+       
             contadorEnemigos.contadorCeletrisEliminados += 1;
 
         }

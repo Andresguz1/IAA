@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ContadorDongus : MonoBehaviour
 {
-    public Text contadorDong;
+    
     public Text dongEliminados;
     private PlayerShoot flechaAtaque;
     
@@ -24,7 +24,7 @@ public class ContadorDongus : MonoBehaviour
 
     void ContadorEnemigosDongus()
     {
-        contadorDong.text = "" + flechaAtaque.contadorD;
+       
         dongEliminados.text = "" + flechaAtaque.contadorDonEliminados;
     }
 }

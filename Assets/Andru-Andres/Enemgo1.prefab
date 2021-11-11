@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 04a04b24c23b0b24d9213707cb199474, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,6 +118,8 @@ MonoBehaviour:
     type: 3}
   prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
     type: 3}
+  almas: {fileID: 0}
+  contAlmas: 0
   damageTime: 0
   gameActivo: 1
   agente: {fileID: 1524558840079926219}
@@ -134,7 +136,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0

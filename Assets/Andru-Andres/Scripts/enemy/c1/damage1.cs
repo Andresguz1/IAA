@@ -7,7 +7,7 @@ public class damage1 : MonoBehaviour
     
     private VidaPlayer jugador;
     [SerializeField]
-    public int cantidad =20;
+    public int cantidad =10;
 
 
     void Start()
@@ -16,18 +16,11 @@ public class damage1 : MonoBehaviour
    
     }
 
-
-    void Update()
-    {
-    }
-   
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag =="Player")
         {
             jugador.vida -= cantidad;
-
-            Debug.Log("dada");
             Debug.Log(jugador.vida);
 
         }

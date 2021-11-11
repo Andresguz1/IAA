@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+
 public class e1 : MonoBehaviour
 {
     //variable para la vision velocidad
@@ -16,8 +18,8 @@ public class e1 : MonoBehaviour
     public GameObject prefabRafaga;
     public GameObject prefabPowerShoot;
 
-   
-   
+    public Text almas;
+    public int contAlmas;
 
 
 
@@ -93,18 +95,21 @@ public class e1 : MonoBehaviour
             if (currentDamageTime > damageTime)
             {
                 currentDamageTime = 0.0f;
-                Debug.Log("f");
+           
             }
         }
 
         if (other.gameObject.CompareTag("flecha") || other.gameObject.CompareTag("SuperFlecha"))
         {
+            almas.text = contAlmas + 1.ToString();
             Destroy(gameObject);
+            Debug.Log("f");
             generaPowerUp();
 
         }
         if (other.gameObject.CompareTag("Espada"))
         {
+            Debug.Log("fw");
             Destroy(gameObject);
             generaPowerUp();
 
