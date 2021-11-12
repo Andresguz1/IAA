@@ -1,19 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-public class e3 : MonoBehaviour
-{
-    public Transform[] waypoints;
-    public int speed;
 
-    private int waypointsIndex;
-    private float dista;
-    /// <summary>
-    /// ///////////
-    /// </summary>
-      //variable para la vision velocidad
-   // public float speed;
+
+public class pu : MonoBehaviour
+{
+    //variable para la vision velocidad
+    public float speed;
     public float vidionRadio;
     GameObject player; //para guardar jugador
     Vector3 initialposition;//posicion inicial
@@ -26,73 +19,47 @@ public class e3 : MonoBehaviour
     float currentDamageTime;
     public bool gameActivo = true;
     private VidaPlayer vida;
+
     void Start()
     {
-        waypointsIndex = 0;
-        transform.LookAt(waypoints[waypointsIndex].position);
-        //
-        player = GameObject.FindGameObjectWithTag("Player");
+       
 
+        player = GameObject.FindGameObjectWithTag("Player");
+       
         initialposition = transform.position;
 
-
+        
         vida = GameObject.Find("Jugador").GetComponent<VidaPlayer>();
         if (vida.vida == 0)
         {
             gameActivo = false;
         }
-
     }
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, vidionRadio);
-    }
-    void Update()
-    {
-        Vector3 target = initialposition;
 
+
+    void FixedUpdate()
+    {
 
         if (gameActivo == true)
         {
 
-        
+            Vector3 target = initialposition;
 
             float dist = Vector3.Distance(player.transform.position, transform.position);
-            if (dist < vidionRadio)
-            {
-                target = player.transform.position;
+            if (dist < vidionRadio) target = player.transform.position;
 
-                float fixedSpeed = speed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
-                Debug.DrawLine(transform.position, target, Color.green);
-            }
-            else
-            {
-                dista = Vector3.Distance(transform.position, waypoints[waypointsIndex].position);
-                if (dista < 1f)
-                {
+            float fixedSpeed = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+            Debug.DrawLine(transform.position, target, Color.green);
 
-                    increseIndex();
-                }
-                Patrol();
-            }
             PowerUp = Random.Range(0, 3);
+        }
+    }
 
-        }
-    }
-    void Patrol()
+    void OnDrawGizmos()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-    }
-    void increseIndex()
-    {
-        waypointsIndex++;
-        if (waypointsIndex >= waypoints.Length)
-        {
-            waypointsIndex = 0;
-        }
-        transform.LookAt(waypoints[waypointsIndex].position);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, vidionRadio);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -118,14 +85,14 @@ public class e3 : MonoBehaviour
         }
     }
 
-
+   
     void generaPowerUp()
     {
 
         if (PowerUp == 0 || PowerUp == 1)
         {
             Instantiate(prefabLuz, gameObject.transform.position, prefabLuz.transform.rotation);
-            // Destroy(prefabLuz, 6f);
+           // Destroy(prefabLuz, 6f);
 
 
         }
@@ -134,7 +101,7 @@ public class e3 : MonoBehaviour
         {
 
             Instantiate(prefabRafaga, gameObject.transform.position, prefabRafaga.transform.rotation);
-            // Destroy(prefabRafaga, 6f);
+           // Destroy(prefabRafaga, 6f);
 
         }
 
