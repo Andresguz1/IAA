@@ -20,7 +20,7 @@ public class EvitarEspada : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("lo se");
+           // Debug.Log("lo se");
         }
     }
 }

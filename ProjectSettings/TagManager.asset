@@ -19,6 +19,7 @@ TagManager:
   - SuperFlecha
   - limite
   - enemigoCeletris
+  - gordo
   layers:
   - Default
   - TransparentFX

@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 7935481001336880343}
   - component: {fileID: 3893033365920914554}
   - component: {fileID: 7398610777032754768}
+  - component: {fileID: 4642615547211947761}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: flecha
@@ -210,7 +211,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velFlecha: 15
-  contadorEnemigos: 0
+  contadorEnemigos: {fileID: 0}
+  winer: {fileID: 0}
+--- !u!114 &4642615547211947761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7308125317778630253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e88f99e2eaed544d83d9c107eb8bf9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  goldo: {fileID: 4140391078016145330, guid: 718c72aedd91b5244be94083e89010bf, type: 3}
 --- !u!1 &7351602708121909334
 GameObject:
   m_ObjectHideFlags: 0
