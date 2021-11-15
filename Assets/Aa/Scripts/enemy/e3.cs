@@ -61,6 +61,7 @@ public class e3 : MonoBehaviour
             float dist = Vector3.Distance(player.transform.position, transform.position);
             if (dist < vidionRadio)
             {
+                vidionRadio = 30;
                 target = player.transform.position;
 
                 float fixedSpeed = speed * Time.deltaTime;
