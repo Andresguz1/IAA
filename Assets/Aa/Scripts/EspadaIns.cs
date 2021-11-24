@@ -12,41 +12,20 @@ public class EspadaIns : MonoBehaviour
     
     public float tiempoRot;
     public float velociadRotacion;
-
-   
-
     void Start()
     {
         
     }
-    
-
-   
-   
-
-
     void Update()
     {
-
         tiempoRot += Time.deltaTime;
-
         if (Input.GetMouseButtonDown(1) && tiempoRot>velociadRotacion)
-        {
-           
+        {          
             SoundSystem.instance.PlayBara();
-            espada.gameObject.SetActive(true);
-            
+            espada.gameObject.SetActive(true);      
             tiempoRot = 0;
-            
-           
         }
-        
-
-       
     }
-
-
-
 }
 
 

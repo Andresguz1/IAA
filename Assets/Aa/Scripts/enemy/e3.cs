@@ -26,6 +26,7 @@ public class e3 : MonoBehaviour
     float currentDamageTime;
     public bool gameActivo = true;
     private VidaPlayer vida;
+   // private Vida3 vidaGordo;
     void Start()
     {
         waypointsIndex = 0;
@@ -78,7 +79,7 @@ public class e3 : MonoBehaviour
                 }
                 Patrol();
             }
-            PowerUp = Random.Range(0, 3);
+          //  PowerUp = Random.Range(0, 3);
 
         }
     }
@@ -107,44 +108,35 @@ public class e3 : MonoBehaviour
             }
         }
 
-        if (other.gameObject.CompareTag("flecha") || other.gameObject.CompareTag("SuperFlecha"))
-        {
-            generaPowerUp();
-
-        }
-        if (other.gameObject.CompareTag("Espada"))
-        {
-            generaPowerUp();
-
-        }
+        //if (other.gameObject.CompareTag("flecha") || other.gameObject.CompareTag("SuperFlecha"))
+        //{
+        //    Debug.Log("kk");
+        //     //   generaPowerUp();
+        //}
+        //if (other.gameObject.CompareTag("Espada"))
+        //{           
+        //      //  generaPowerUp();        
+        //}
     }
 
+    //void generaPowerUp()
+    //{
+    //    if (PowerUp == 0 || PowerUp == 1)
+    //    {
+    //        Instantiate(prefabLuz, gameObject.transform.position, prefabLuz.transform.rotation);
+    //        // Destroy(prefabLuz, 6f);
+    //    }
 
-    void generaPowerUp()
-    {
+    //    if (PowerUp == 2)
+    //    {
+    //        Instantiate(prefabRafaga, gameObject.transform.position, prefabRafaga.transform.rotation);
+    //        // Destroy(prefabRafaga, 6f);
+    //    }
 
-        if (PowerUp == 0 || PowerUp == 1)
-        {
-            Instantiate(prefabLuz, gameObject.transform.position, prefabLuz.transform.rotation);
-            // Destroy(prefabLuz, 6f);
-
-
-        }
-
-        if (PowerUp == 2)
-        {
-
-            Instantiate(prefabRafaga, gameObject.transform.position, prefabRafaga.transform.rotation);
-            // Destroy(prefabRafaga, 6f);
-
-        }
-
-        if (PowerUp == 3)
-        {
-            Instantiate(prefabPowerShoot, gameObject.transform.position, prefabPowerShoot.transform.rotation);
-            //(prefabPowerShoot, 6f);
-
-        }
-
-    }
+    //    if (PowerUp == 3)
+    //    {
+    //        Instantiate(prefabPowerShoot, gameObject.transform.position, prefabPowerShoot.transform.rotation);
+    //        //(prefabPowerShoot, 6f);
+    //    }
+    //}
 }

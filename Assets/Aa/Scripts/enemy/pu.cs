@@ -80,6 +80,7 @@ public class pu : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Espada"))
         {
+            Debug.Log("fff");
             generaPowerUp();
 
         }
@@ -91,6 +92,7 @@ public class pu : MonoBehaviour
 
         if (PowerUp == 0 || PowerUp == 1)
         {
+          
             Instantiate(prefabLuz, gameObject.transform.position, prefabLuz.transform.rotation);
            // Destroy(prefabLuz, 6f);
 

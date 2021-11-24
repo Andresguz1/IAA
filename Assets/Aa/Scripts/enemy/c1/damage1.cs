@@ -7,7 +7,7 @@ public class damage1 : MonoBehaviour
     
     private VidaPlayer jugador;
     [SerializeField]
-    public int cantidad =10;
+    public int cantidad =20;
 
 
     void Start()
