@@ -20,6 +20,7 @@ TagManager:
   - limite
   - enemigoCeletris
   - gordo
+  - pared
   layers:
   - Default
   - TransparentFX

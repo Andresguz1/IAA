@@ -101,7 +101,7 @@ public class e1 : MonoBehaviour
 
         if (other.gameObject.CompareTag("flecha") || other.gameObject.CompareTag("SuperFlecha"))
         {
-            almas.text = contAlmas + 1.ToString();
+           // almas.text = contAlmas + 1.ToString();
             Destroy(gameObject);
             Debug.Log("f");
             generaPowerUp();

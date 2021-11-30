@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6034054735996053081}
   - component: {fileID: 5126673927008053567}
   - component: {fileID: 6034054735996053080}
-  - component: {fileID: 6034054735996053058}
   - component: {fileID: 1541363665}
   m_Layer: 0
   m_Name: Gordo
@@ -93,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6034054735996053083}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -126,6 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d4d52c65af41d428c7380cdbdf5b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerUp: 0
+  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
+    type: 3}
+  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
+    type: 3}
+  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
+    type: 3}
   dano: {fileID: 4642615547211947761, guid: da1fcc389914d3e4d8c90d6c1a2e5113, type: 3}
   vida: 50
 --- !u!114 &6034054735996053080
@@ -147,30 +153,6 @@ MonoBehaviour:
   - {fileID: 6034054736687562306}
   speed: 2
   vidionRadio: 10
-  PowerUp: 0
-  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
-    type: 3}
-  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
-    type: 3}
-  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
-    type: 3}
-  cantidad: 0
-  damageTime: 0
-  gameActivo: 1
---- !u!114 &6034054735996053058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6034054735996053083}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d472c2e4e7faef142bcd2cfb46cafcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  vidionRadio: 20
   PowerUp: 0
   prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
     type: 3}
@@ -209,7 +191,6 @@ GameObject:
   - component: {fileID: 6034054736144799618}
   - component: {fileID: 6034054736144799645}
   - component: {fileID: 6034054736144799644}
-  - component: {fileID: 6034054736144799647}
   m_Layer: 0
   m_Name: Gordo (3)
   m_TagString: gordo
@@ -286,7 +267,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6034054736144799641}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -319,6 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d4d52c65af41d428c7380cdbdf5b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerUp: 0
+  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
+    type: 3}
+  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
+    type: 3}
+  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
+    type: 3}
   dano: {fileID: 4642615547211947761, guid: da1fcc389914d3e4d8c90d6c1a2e5113, type: 3}
   vida: 50
 --- !u!114 &6034054736144799644
@@ -340,30 +328,6 @@ MonoBehaviour:
   - {fileID: 6034054736147552599}
   speed: 2
   vidionRadio: 10
-  PowerUp: 0
-  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
-    type: 3}
-  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
-    type: 3}
-  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
-    type: 3}
-  cantidad: 0
-  damageTime: 0
-  gameActivo: 1
---- !u!114 &6034054736144799647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6034054736144799641}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d472c2e4e7faef142bcd2cfb46cafcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  vidionRadio: 20
   PowerUp: 0
   prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
     type: 3}
@@ -449,7 +413,6 @@ GameObject:
   - component: {fileID: 6034054736834368444}
   - component: {fileID: 6034054736834368447}
   - component: {fileID: 6034054736834368446}
-  - component: {fileID: 6034054736834368441}
   m_Layer: 0
   m_Name: Gordo (2)
   m_TagString: gordo
@@ -526,7 +489,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6034054736834368443}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -559,6 +522,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d4d52c65af41d428c7380cdbdf5b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerUp: 0
+  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
+    type: 3}
+  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
+    type: 3}
+  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
+    type: 3}
   dano: {fileID: 4642615547211947761, guid: da1fcc389914d3e4d8c90d6c1a2e5113, type: 3}
   vida: 50
 --- !u!114 &6034054736834368446
@@ -580,30 +550,6 @@ MonoBehaviour:
   - {fileID: 6034054737199022504}
   speed: 2
   vidionRadio: 10
-  PowerUp: 0
-  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
-    type: 3}
-  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
-    type: 3}
-  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
-    type: 3}
-  cantidad: 0
-  damageTime: 0
-  gameActivo: 1
---- !u!114 &6034054736834368441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6034054736834368443}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d472c2e4e7faef142bcd2cfb46cafcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  vidionRadio: 20
   PowerUp: 0
   prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
     type: 3}
@@ -667,7 +613,6 @@ GameObject:
   - component: {fileID: 6034054737152810583}
   - component: {fileID: 6034054737152810582}
   - component: {fileID: 6034054737152810577}
-  - component: {fileID: 6034054737152810576}
   - component: {fileID: 382742473}
   m_Layer: 0
   m_Name: Gordo (1)
@@ -745,7 +690,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6034054737152810578}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -778,6 +723,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d4d52c65af41d428c7380cdbdf5b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerUp: 0
+  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
+    type: 3}
+  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
+    type: 3}
+  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
+    type: 3}
   dano: {fileID: 4642615547211947761, guid: da1fcc389914d3e4d8c90d6c1a2e5113, type: 3}
   vida: 50
 --- !u!114 &6034054737152810577
@@ -799,30 +751,6 @@ MonoBehaviour:
   - {fileID: 6034054737582936619}
   speed: 2
   vidionRadio: 10
-  PowerUp: 0
-  prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
-    type: 3}
-  prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
-    type: 3}
-  prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
-    type: 3}
-  cantidad: 0
-  damageTime: 0
-  gameActivo: 1
---- !u!114 &6034054737152810576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6034054737152810578}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d472c2e4e7faef142bcd2cfb46cafcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  vidionRadio: 20
   PowerUp: 0
   prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
     type: 3}

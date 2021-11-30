@@ -69,59 +69,33 @@ public class PlayerShoot : MonoBehaviour
                     tiempoDeRafaga = false;
                     powerUpRafagaActivo.gameObject.SetActive(false);
                 }
-
             }
-
         }
 
         if(shootPower ==true)
         {
             if(Input.GetKey(KeyCode.E))
-            {
-               
+            {              
                 PowerShoot();
             }
-        }
-       
-        
-
-
-
-     
+        }       
     }
 
     private void OnTriggerEnter(Collider other)
-    {
-      
+    {      
             if (other.tag == "Rafaga")
             {
-
                 enRfaga = true;
-                contRafaga += 1;
-               
+                contRafaga += 1;               
                 Destroy(other.gameObject);
-               
-                
             }
-
-
-
 
             if (other.tag == "powerShoot")
             {
                 shootPower = true;
-                powerUpPowerShootActivo.gameObject.SetActive(true);
-
-               
-                Destroy(other.gameObject);
-                
-            }
-        
-     
-
-
-
-
+                powerUpPowerShootActivo.gameObject.SetActive(true);               
+                Destroy(other.gameObject);                
+            }      
     }
 
 
