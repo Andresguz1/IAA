@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class e1 : MonoBehaviour
+public class e5 : MonoBehaviour
 {
     //variable para la vision velocidad
     public float speed;
@@ -40,6 +40,7 @@ public class e1 : MonoBehaviour
 
     void Start()
     {
+        PowerUp = Random.Range(0, 3);
         // variacionAtaque = Random.Range(0, 2);
 
         NavMeshAgent agente = GetComponent<NavMeshAgent>();
@@ -78,14 +79,14 @@ public class e1 : MonoBehaviour
     }
     private void Update()
     {
-        PowerUp = Random.Range(0, 3);
+        PowerUp = Random.Range(0, 10);
     }
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, vidionRadio);
     }
-
+ 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PLayer")
@@ -95,18 +96,19 @@ public class e1 : MonoBehaviour
             if (currentDamageTime > damageTime)
             {
                 currentDamageTime = 0.0f;
-           
+
             }
         }
 
         if (other.gameObject.CompareTag("flecha") || other.gameObject.CompareTag("SuperFlecha"))
         {
-           // almas.text = contAlmas + 1.ToString();
+          //  almas.text = contAlmas + 1.ToString();
             Destroy(gameObject);
             Debug.Log("f");
             generaPowerUp();
 
         }
+  
         if (other.gameObject.CompareTag("Espada"))
         {
             Debug.Log("fw");
@@ -116,23 +118,14 @@ public class e1 : MonoBehaviour
         }
     }
 
-    void TorreDestruida()
-    {
-        Vector3 target = initialposition;
-        float dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist < vidionRadio) target = player.transform.position;
-
-        float fixedSpeed = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
-        Debug.DrawLine(transform.position, target, Color.green);
-    }
+ 
     void generaPowerUp()
     {
 
         if (PowerUp == 0 || PowerUp == 1)
         {
             Instantiate(prefabLuz, gameObject.transform.position, prefabLuz.transform.rotation);
-           // Destroy(prefabLuz, 6f);
+            // Destroy(prefabLuz, 6f);
 
 
         }
@@ -148,7 +141,7 @@ public class e1 : MonoBehaviour
         if (PowerUp == 3)
         {
             Instantiate(prefabPowerShoot, gameObject.transform.position, prefabPowerShoot.transform.rotation);
-           // Destroy(prefabPowerShoot, 6f);
+            // Destroy(prefabPowerShoot, 6f);
 
         }
 

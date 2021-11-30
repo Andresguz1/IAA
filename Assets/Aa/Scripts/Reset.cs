@@ -6,6 +6,8 @@ public class Reset : MonoBehaviour
 {
     private gameOver GameOverbase;
     private YouWin Win;
+    [SerializeField]
+    public int escena;
 
     void Start()
     {
@@ -18,7 +20,7 @@ public class Reset : MonoBehaviour
     {
         if(GameOverbase.ResetBase==true && Input.GetKey(KeyCode.F))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(escena);
         }
 
         if (Win.ResetBase == true && Input.GetKey(KeyCode.F))
