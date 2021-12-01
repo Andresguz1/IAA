@@ -306,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70347634}
   m_LocalRotation: {x: 0.66675967, y: 0, z: 0, w: 0.7452728}
-  m_LocalPosition: {x: 0.16864295, y: 9.55, z: -32.64}
+  m_LocalPosition: {x: 0.16864295, y: 9.55, z: -43.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -392,27 +392,27 @@ PrefabInstance:
     - target: {fileID: 4299272908656525575, guid: 49a4491d349af7746b165597cd3eaeaa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.706975
+      value: 0.70710444
       objectReference: {fileID: 0}
     - target: {fileID: 4299272908656525575, guid: 49a4491d349af7746b165597cd3eaeaa,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.013652029
+      value: 0.0018259744
       objectReference: {fileID: 0}
     - target: {fileID: 4299272908656525575, guid: 49a4491d349af7746b165597cd3eaeaa,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0136520285
+      value: 0.0018259733
       objectReference: {fileID: 0}
     - target: {fileID: 4299272908656525575, guid: 49a4491d349af7746b165597cd3eaeaa,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.706975
+      value: -0.70710444
       objectReference: {fileID: 0}
     - target: {fileID: 4299272908656525575, guid: 49a4491d349af7746b165597cd3eaeaa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -182.213
+      value: -180.296
       objectReference: {fileID: 0}
     - target: {fileID: 4299272908656525575, guid: 49a4491d349af7746b165597cd3eaeaa,
         type: 3}
@@ -640,6 +640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemgo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945013673489184997, guid: 2a98610beb748ae42897a24ae9ab7c46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a98610beb748ae42897a24ae9ab7c46, type: 3}
@@ -1008,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826067775}
   m_LocalRotation: {x: 0.66675967, y: -0, z: -0, w: 0.7452728}
-  m_LocalPosition: {x: 0.16864295, y: 9.55, z: -32.64}
+  m_LocalPosition: {x: 0.16864295, y: 9.55, z: -43.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 641040570}
@@ -1461,7 +1466,7 @@ PrefabInstance:
     - target: {fileID: 2492253276909594781, guid: 1c9667e9a8016cc4e8ec4dbf6285a8b6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.3
+      value: -43.9
       objectReference: {fileID: 0}
     - target: {fileID: 2492253276909594781, guid: 1c9667e9a8016cc4e8ec4dbf6285a8b6,
         type: 3}
@@ -2070,6 +2075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemigo_Explosivo5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399492218074357176, guid: f5e3d294a70f9e04aa356ba668bef70c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5e3d294a70f9e04aa356ba668bef70c, type: 3}
