@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 58ccff0bde7ac8a4caa1a8742ad0911c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - prefabLuz: {fileID: 8904909441606485377, guid: 9087a27ca87c4c44f8cd8d2230a5dcdf,
+      type: 3}
+  - prefabRafaga: {fileID: 2326079841216106474, guid: 62aacf8c9d6393c4dacd4d5b51e1f8df,
+      type: 3}
+  - prefabPowerShoot: {fileID: 5544284538192786557, guid: 2f7a301cd6fb6ce409af270da1a9184f,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

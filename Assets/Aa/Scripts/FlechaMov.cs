@@ -23,12 +23,13 @@ public class FlechaMov : MonoBehaviour
        
 
         transform.Translate(Vector3.up* velFlecha * Time.deltaTime);
+        Destroy(gameObject, 5f);
       
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="enemigo")
+        if (other.tag=="enemigo")
         {
             
 
@@ -50,7 +51,7 @@ public class FlechaMov : MonoBehaviour
 
         }
 
-        if (other.tag=="Towers" || other.tag =="Towers1" || other.tag =="Castle" || other.tag =="limite")
+        if (other.tag=="Towers" || other.tag =="Towers1" || other.tag =="Castle" || other.tag =="limite" || other.tag == "pared")
         {
             Destroy(this.gameObject);
         }

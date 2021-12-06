@@ -28,7 +28,6 @@ public class VidaPlayer : MonoBehaviour
         if(vida==0)
         {
             DisminucionCorazones();
-            
         }
 
      
