@@ -137,6 +137,7 @@ public class EnemyLVL8 : MonoBehaviour
         {
             //  almas.text = contAlmas + 1.ToString();
             health = health - 20;
+            Destroy(other.gameObject);
             Debug.Log("f");
             //generaPowerUp();
 

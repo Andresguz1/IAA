@@ -8,6 +8,7 @@ public class EnemyLVL4 : MonoBehaviour
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
+    AudioSource audioSource;
 
     //Patrulla
     public Vector3 walkPoint;
@@ -29,6 +30,7 @@ public class EnemyLVL4 : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         goldScript = FindObjectOfType<GoldLife>();
         playerScript = FindObjectOfType<VidaPlayer>();
         player = GameObject.FindGameObjectWithTag("Gold").transform;
@@ -86,6 +88,7 @@ public class EnemyLVL4 : MonoBehaviour
         {
             //Attack code here
             goldScript.gold = goldScript.gold - damage;
+            audioSource.Play();
 
             //
             alreadyAttacked = true;
