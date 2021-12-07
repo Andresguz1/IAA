@@ -18,14 +18,14 @@ public class Reset : MonoBehaviour
   
     void Update()
     {
-        if(GameOverbase.ResetBase==true && Input.GetKey(KeyCode.F))
+        //if(GameOverbase.ResetBase==true && Input.GetKey(KeyCode.F))
+        //{
+        //    SceneManager.LoadScene(escena);
+        //}
+        if (Input.GetKey(KeyCode.F))
         {
             SceneManager.LoadScene(escena);
         }
-
-        if (Win.ResetBase == true && Input.GetKey(KeyCode.F))
-        {
-            SceneManager.LoadScene(0);
-        }
+      
     }
 }
